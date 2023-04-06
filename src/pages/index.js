@@ -1,11 +1,8 @@
-import  Header  from '../components/Header.jsx';
-
-
-
+import ProductList from '../containers/ProductList.jsx'
 export default function Home() {
   return (
     <>
-      <Header/>
+      <ProductList/>
     </>
   )
 }
