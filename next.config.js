@@ -1,7 +1,12 @@
 const path = require('path');
 
 module.exports = {
+  /*reactStrictMode: true,
+  image: {
+    domains: ['placeimg.com']
+  },*/
   webpack: (config) => {
+    
     // Agregar alias para importar archivos desde '@components'
     config.resolve.alias['@components'] = path.join(__dirname, 'src/components');
     config.resolve.alias['@icons'] = path.join(__dirname, 'src/assets/icons');

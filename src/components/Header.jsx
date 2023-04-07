@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Link from "next/link.js";
 import Image from "next/image.js";
 import Menu from '../components/Menu.jsx';
 import menu from '../assets/icons/icon_menu.svg';
@@ -15,7 +16,9 @@ const Header = () => {
                 <nav className={styles.nav}>
                     <Image src={menu} alt="menu" className={styles['menu']} />
                     <div className={styles['navbar-left']}>
-                        <Image src={logo} alt="logo" className={styles['nav-logo']} />
+                        <Link className={styles['nav-logo']} href="/">
+                            <Image src={logo} alt="logo"/>
+                        </Link>
                         <ul>
                             <li>
                                 <a href="/">All</a>

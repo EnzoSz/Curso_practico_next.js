@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import Link from 'next/link.js';
 import OrderItem from '../components/OrderItem.jsx';
 import AppContext from '../context/AppContext.js';
 import arrow from '@icons/flechita.svg';
@@ -14,13 +15,13 @@ const MyOrder = () => {
 
 	return (
 		<aside className={styles.MyOrder}>
-			<div className="title-container">
+			<div className={styles['title-container']}>
 				<img src= {arrow} alt="arrow" />
-				<p className="title">My order</p>
+				<p className={styles.title}>My order</p>
 			</div>
-			<div className="my-order-content">
+			<div className={styles['my-order-content']}>
 				{state.cart.map(product => (
-					<OrderItem product={product} key={`orderItem-{product.id}`}/>
+					<OrderItem product={product} key={`orderItem-${product.id}`}/>
 				))}
 				<div className="order">
 					<p>
@@ -28,9 +29,9 @@ const MyOrder = () => {
 					</p>
 					<p>${sumTotal()}</p>
 				</div>
-				<button className="primary-button">
+				<Link className={styles['primary-button']} href="/checkout">
 					Checkout
-				</button>
+				</Link>
 			</div>
 		</aside>
 	);
