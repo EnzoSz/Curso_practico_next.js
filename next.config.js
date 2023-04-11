@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  /*reactStrictMode: true,
-  image: {
+  images: {
     domains: ['placeimg.com']
-  },*/
+  },
+  reactStrictMode: true,
   webpack: (config) => {
     
     // Agregar alias para importar archivos desde '@components'

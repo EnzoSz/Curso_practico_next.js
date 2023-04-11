@@ -6,5 +6,5 @@ const NotFound = () => {
             No encotrado, Error 404
         </div>
     );
-}
+};
 export default NotFound;

@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import Image from 'next/image.js';
 import Link from 'next/link.js';
 import OrderItem from '../components/OrderItem.jsx';
 import AppContext from '../context/AppContext.js';
@@ -11,12 +12,12 @@ const MyOrder = () => {
 		const reducer = (accumulator,currentValue) => accumulator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
-	}
+	};
 
 	return (
 		<aside className={styles.MyOrder}>
 			<div className={styles['title-container']}>
-				<img src= {arrow} alt="arrow" />
+				<Image src= {arrow} alt="arrow" />
 				<p className={styles.title}>My order</p>
 			</div>
 			<div className={styles['my-order-content']}>
@@ -35,6 +36,6 @@ const MyOrder = () => {
 			</div>
 		</aside>
 	);
-}
+};
 
 export default MyOrder;
