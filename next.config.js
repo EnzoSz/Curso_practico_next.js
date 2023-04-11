@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   images: {
-    domains: ['placeimg.com']
+    domains: ['placeimg.com', 'api.lorem.space', 'futureworld.com.vn']
   },
   reactStrictMode: true,
   webpack: (config) => {
