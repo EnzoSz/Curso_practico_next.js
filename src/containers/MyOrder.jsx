@@ -4,10 +4,10 @@ import Link from 'next/link.js';
 import OrderItem from '../components/OrderItem.jsx';
 import AppContext from '../context/AppContext.js';
 import arrow from '@icons/flechita.svg';
-import styles from '@styles/MyOrder.module.scss';
+import styles from '../styles/MyOrder.module.scss';
 
 const MyOrder = () => {
-	const {state} = useContext(AppContext);
+	const {state, toggleOrder} = useContext(AppContext);
 	const sumTotal = () => {
 		const reducer = (accumulator,currentValue) => accumulator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);
@@ -17,7 +17,7 @@ const MyOrder = () => {
 	return (
 		<aside className={styles.MyOrder}>
 			<div className={styles['title-container']}>
-				<Image src= {arrow} alt="arrow" />
+				<Image className={styles['more-clickable-area pointer']} src= {arrow} alt="arrow" onClick={() => toggleOrder()} />
 				<p className={styles.title}>My order</p>
 			</div>
 			<div className={styles['my-order-content']}>
