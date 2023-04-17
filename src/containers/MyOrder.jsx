@@ -3,7 +3,7 @@ import Image from 'next/image.js';
 import Link from 'next/link.js';
 import OrderItem from '../components/OrderItem.jsx';
 import AppContext from '../context/AppContext.js';
-import arrow from '@icons/flechita.svg';
+import arrow from '../assets/icons/flechita.svg';
 import styles from '../styles/MyOrder.module.scss';
 
 const MyOrder = () => {

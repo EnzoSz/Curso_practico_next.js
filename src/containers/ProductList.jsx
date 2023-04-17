@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductItem from '@components/ProductItem.jsx';
+import ProductItem from '../components/ProductItem.jsx';
 import useGetProducts from '../hooks/useGetProducts.js';
 import styles from '../styles/ProductList.module.scss';
 

@@ -1,6 +1,13 @@
 const path = require('path');
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  mode: 'production',
+  disable: false,
+});
 
-module.exports = {
+
+module.exports  = withPWA( {
   images: {
     domains: ['placeimg.com', 'api.lorem.space', 'futureworld.com.vn', 'picsum.photos']
   },
@@ -24,4 +31,4 @@ module.exports = {
 
     return config;
   },
-};
+});

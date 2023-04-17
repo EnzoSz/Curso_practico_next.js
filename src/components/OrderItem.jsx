@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import Image from 'next/image.js';
 import AppContext from '../context/AppContext.js';
-import close from '@icons/icon_close.png';
-import styles from '@styles/OrderItem.module.scss';
+import close from '../assets/icons/icon_close.png';
+import styles from '../styles/OrderItem.module.scss';
 
 const OrderItem = ({product}) => {
 	const {removeFromCart} = useContext(AppContext);

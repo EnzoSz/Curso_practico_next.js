@@ -1,7 +1,7 @@
 import React, { useContext} from 'react';
 import Image from "next/image.js";
 import AppContext from '../context/AppContext.js';
-import addToCartImage from '@icons/bt_add_to_cart.svg';
+import addToCartImage from '../assets/icons/bt_add_to_cart.svg';
 import styles from '../styles/ProductItem.module.scss';
 const ProductItem = ({ product }) => {
 	const {addToCart} = useContext(AppContext);
